@@ -1,0 +1,180 @@
+/*font Quicksand from google font*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root{
+    --base-clr: #E4E4E4; 
+    --sidebar-clr: #DDDDDD; 
+    --line-clr: #a39fbb;
+    --hover-clr:#bfbfc2;
+    --text-clr: #000000;
+    --accent-clr: #4334ff;
+    --secondary-text-clr: #a0ff34;
+    --item1-clr: #ff1d1d;
+    --item2-clr: #ff9831;
+    --item3-clr: #fff34a;
+    --item4-clr: #59ff53;
+    --item5-clr: #35f4f7;
+    --item6-clr: #a43be6;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    min-height: 100vh;   /*body can grow with more content*/
+    background: var(--base-clr);
+    color: var(--text-clr);
+    display: grid;
+    grid-template-columns: auto 1fr;  /*1fr allows grow and shrink*/
+    grid-template-rows: 60px 1fr;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+}
+
+#sidebar{
+    box-sizing: border-box;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: var(--sidebar-clr);
+    height: calc(100vh - 3rem);   /*minus the size of navbar or else the sidebar scroll will eat the sticky Navbar*/
+    width: 250px;
+    top: 3rem;                    /*under the size of the navbar*/
+    position: sticky;             /*fixed*/
+    align-self: start;            /*start align to the top*/
+    padding: 5px 1em;             /*1em on the sides*/
+    border-radius: 10px;
+    color: var(--text-clr);
+
+    position: sticky;            /*better to use sticky than fixed as fixed ruins the layout*/
+    top: 0;
+    align-self: start;
+}
+#sidebar ul{
+    list-style: none;             /*remove bullet points on list*/
+}
+#sidebar > ul > li:first-child{   /*first list item*/
+    display: flex;                /*positions to the right side*/
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    .logo{
+        font-weight: 600;
+    }
+}
+#sidebar ul li.active a{         /*sidebar website links*/
+    color: var(--text-clr);
+    svg{                         /*svg color change*/
+        fill: var(--text-clr);
+    }
+}
+#sidebar a, #sidebar .logo{   /*styling multiiple sidebar elements at once using comma*/
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    align-items: center;
+    gap: 1em;                   /*logo spacing from text*/ 
+}
+.dropdown-btn{
+    margin-left: auto;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+    background-color: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+#sidebar svg{ 
+    flex-shrink: 0;           /*avoid svg size distortion*/
+    fill: var(--text-clr);
+}
+#sidebar a span, #sidebar .dropdown-btn span{
+    flex-grow: 1;            /*supposed to space out the dropdown button far from the text..*/
+}
+#sidebar a:hover, #sidebar .dropdown-btn:hover{
+    background: var(--hover-clr);
+}
+
+
+
+.header {
+    background-color: var(--);
+    grid-column: 2/3;
+    grid-row: 1/1;
+}
+
+.main{
+    background-color: var(--accent-clr);
+}
+.main .main-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr, repeat(6, 1fr), 1fr;
+    height: 70vh;
+}
+.item1{
+    background-color: var(--item1-clr);
+    grid-column: 1 / span 4;
+    grid-column-end: 5;
+    grid-row: 1 / span 3;
+}
+.item2{
+    background-color: var(--item2-clr) ;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 4 / span 5;
+}
+.item3{
+    background-color: var(--item3-clr);
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.item4{
+    background-color: var(--item4-clr);
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.item5{
+    background-color: var(--item5-clr);
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.item6{
+    background-color: var(--item6-clr);
+    grid-column: 2 / span 3;
+    grid-row: 8;
+}
+
+
+@media(max-width: 550px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+          "nav"
+          "sidebar"
+          "main"
+          "content1"
+          "content2"
+          "content3"
+          "footer";
+    }
+    aside{
+        position: fixed;
+        width: 300px;
+        display: none;  /*hides the sidebar on mobile*/
+    }
+    .show{   /*This is for a button to toggle the sidebar*/
+        display: block;
+    }
+      }
+    }

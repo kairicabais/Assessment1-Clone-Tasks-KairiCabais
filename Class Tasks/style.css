@@ -1,0 +1,43 @@
+*{
+    background-color: black;
+    align-items: center;
+}
+.grid-container {
+  margin: 5px;
+    display: grid;
+    height: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    background-color: #000000;
+    padding: 100px;
+    object-fit: contain;
+    background-size: contain;
+    grid-area: 1 2 3 4;
+  }
+  
+.grid-container> div {
+    display: block;
+    margin: 1px;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-content: center;
+    justify-content: center;
+    background-size: contain;
+  }
+
+.color img{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
+    }
+    
+.color img:hover{
+    filter: grayscale(0%);
+    filter: gray;
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    transition: 1s ease;
+    }
+

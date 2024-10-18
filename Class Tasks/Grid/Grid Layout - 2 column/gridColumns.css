@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0; /* Same width as the sidebar + left position in px */
+   /* font-size: 20px; /* Increased text to enable scrolling */
+   padding: 0px ;                      /*padding between each content*/
+   font-family: "Roboto", sans-serif;
+   font-weight: 900;
+   font-style: bold;
+  }   
+
+  
+  :root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+
+/*from yt*/
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 2fr  1fr 1fr;
+  grid-template-rows: 0.2fr 5fr r;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    ;
+  grid-gap: 0; /*white space between each box*/
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+}
+
+
+main {
+  background: #EA3E14;
+  grid-area: main;
+}
+.main img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* The Navbar */
+nav {
+  background: #a7ffeb;
+  grid-area: nav;
+}
+.navbar {
+  position: absolute;
+  margin: 5px;
+  width: auto;
+  float: left;
+}
+.topnav {
+  overflow: hidden;
+}
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;  /*no text underline*/
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#sidebar  {
+  background: #EA3E14;
+  grid-area: sidebar;
+  grid-gap: 20px;                 /*gap between grid items*/
+  justify-content: right;
+  padding: 20%;
+}
+/*sidebar navigation*/
+.nav-links {
+  justify-content: end;
+  height: 0%;
+  width: 100%;
+  padding: 100px;
+  text-align: right;
+  font-size: 10px;
+}
+.nav-links li {
+  list-style: none;              /*so no bulletted list*/
+}
+.nav-links a {
+  color: #FFB172;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 14px 16px;
+}
+.nav-links a:hover:not(.active) {
+  color: #ffffff;    /**change font*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+footer {
+  display: block;
+  background: #000000;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+/*rectangle for button section*/
+#rectangle{
+  margin:8px;
+  width:200px;
+  height:100px;
+  background:rgb(255, 255, 255);
+  position: absolute;
+  right: 40px;
+  width: 20%;
+  height: 50px;
+}
+
+
+
+/*responsive grid*/
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
+

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body{
+    min-height: 100vh;             /**/
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.main{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100vw;              /*width of content area dependent on box-sizing*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+img{
+    width: 300px;             /*set image sizes so that they are all even*/
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    -webkit-filter: brightness(30%);    /*set the low opacity on the images that are not hovered*/
+    -webkit-transition: all 1s ease;    /*smooth transition animation*/
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.main img:hover:hover {
+    -webkit-filter: brightness(100%);    /*add brightness effect to images on hover*/
+}
+
+header h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 70px;
+    text-align: center;
+    background-image: linear-gradient(to left, #ff6d0ceb, #593ec2);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    linear-gradient (to right, #553c9a 45%, #ee4b2b);
+  }
+  
