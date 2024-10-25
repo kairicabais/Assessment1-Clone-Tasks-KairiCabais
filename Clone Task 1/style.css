@@ -14,7 +14,6 @@ body {
   }
 main{
   background: white;
-  padding: 40px;
   width: 90%;
   /* box-shadow: 0 0 3em; */
   max-width: 64em;       /* for 1024px desktop screen */
@@ -77,6 +76,14 @@ navbar .nav-link{
 header{
   padding: 10px;
 }
+.introduction-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;        /*For aesthetic spacing beween heading and text*/
+    padding-right: 350px;
+}
+
 article{
   margin: 20px;
 }
@@ -123,6 +130,26 @@ img.four-grid-cells {    /*This is the largest image in the grid, it will span 4
   grid-column: span 2 / auto;
 }
 
+
+section .author-title{    /*Separate title for author heading*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 0px 0px;
+}
+
+section .author-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+}
+#author-img{            /*Circle frame for author image*/
+  border-radius: 50%;
+}
 
 
     /* Small Mobile: Styles for viewports between 400px and 600px. */
