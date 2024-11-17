@@ -1,0 +1,113 @@
+/**/
+/*fonts*/
+/*font family: Teko*/ @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap');
+/*font family: Lato*/ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+*{
+  margin: 0;
+}
+
+html {
+  font-size: 12px;
+  font-size: clamp(11px, 3vw, 14px);
+  font-family: "Lato", serif;
+  line-height: 1.4;
+} 
+
+body {
+  background-color: #EEF3F6;
+  color: #222;
+  margin: 0;
+  text-align: center;
+}
+
+
+/* NAVBAR */
+navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+}
+navbar .logo{
+  font-family: "Lato", serif;
+  font-size: 3em;
+}
+navbar ul {
+  display: flex;
+  order: 1;
+  width: 100%;
+  margin-top: 15px;
+navbar a{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+}
+
+
+.content-container {
+display: grid;
+width: 60%;
+max-width: 900px;
+margin: auto;   /* center the block element */
+}
+
+.movie-image {
+      max-width: 100%;
+      inline-size: 100%;
+      display: block;
+      object-fit: cover; 
+}
+
+.movie-title h3 {
+font-family: "Teko", sans-serif;
+font-size: clamp(2em, 1em + 0.5cqi, 3em);
+}
+
+.description {
+font-family: "Lato", sans-serif;
+font-size: 1.5em;
+}
+
+button {
+font-family: "Teko", sans-serif;
+font-size: 2em;   /* As specified in the brief, 2em will be fixed for all screen size. */
+padding: 5px 10px;
+border-radius: 16px;
+transition-duration: 0.2s;
+cursor: pointer;
+margin-top: 16px;
+}
+button:hover {
+background-color: #6f7302; 
+color:#fff; 
+}
+
+.card-button {
+font-family: "Teko", sans-serif;
+font-size: 2em;
+}
+
+
+
+.movie-title {
+font-size: clamp(12px, 20px, 3rem);
+}
+
+
+
+section {
+  display: grid;
+ gap: 20px;
+  margin: auto;   /* center the block element */
+      grid-template-columns: auto auto;
+      padding: 2rem;
+  }
+
+.cards {
+  grid-template-columns: subgrid;
+}

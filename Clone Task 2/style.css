@@ -1,0 +1,197 @@
+/**/
+/*fonts*/
+/*font family: Teko*/ @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap');
+/*font family: Lato*/ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+
+*{
+    margin: 0;
+}
+
+/* html {
+    font-size: 12px;
+    font-size: clamp(11px, 3vw, 14px);
+    define flexible rem size 
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.4;
+  } */
+  
+
+  
+
+/* NAVBAR */
+navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background-color: #4DCCBD;
+  }
+  navbar .logo{
+    font-family: "Lato", serif;
+    font-size: 3em;
+  }
+  navbar ul {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin-top: 15px;
+  }
+  navbar a{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+:root {
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-primary-500: hsl(158, 36%, 20%);
+    --clr-secondary-200: hsl(30, 38%, 92%);
+  
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+  
+    --ff-accent: "Fraunces", serif;
+    --ff-base: "Montserrat", sans-serif;
+  
+    --fw-regular: 500;
+    --fw-bold: 700;
+  }
+  
+  /*
+    1. Use a more-intuitive box-sizing model.
+  */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img,
+  picture,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  /*
+    8. Avoid text overflows
+  */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color:#ffff;
+    overflow-wrap: break-word;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    line-height: 1;
+  }
+  
+  /* general styling */
+  
+  body {
+    height: 100vh;
+    background-color: #231651;
+  }
+
+  h3 {
+    position: relative;
+    margin: 20px;
+    font-size: 48px;
+  }
+  img{
+    display: block;
+    width: 100%;
+    
+    object-fit: cover;
+  }
+
+  section{
+    /* width: clamp(0.9rem + 0.4vw, 1.125rem); */
+    width: clamp(300px,700px,900px);
+    height: 100%;
+    margin: auto; /* centers*/
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* cards section*/
+ .card {
+  display: flex;
+  justify-content: space-between; /* justify content onto the main axis*/
+  align-items: center;
+  background: black;
+  padding: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+ }
+ .cards {
+  display: flex;
+  justify-content: space-between; /* justify content onto the main axis*/
+  align-items: center;
+  background: black;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  flex-grow: 1;
+ }
+
+ /* responsiveness*/
+section .card .cards{
+  flex-wrap: wrap;
+  flex: 0 0 30%;
+}
+
+section>div{     /*calling all immediate children of container class.*/
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  font-family: sans-serif;
+  box-sizing: 0 0 5px rgba(0,0,0,0.4);
+}
+
+
+
+@media (max-width: 540px) {
+  section .card .cards{
+    flex: 0 0 30%;
+    margin-bottom: 20px;
+  }
+}

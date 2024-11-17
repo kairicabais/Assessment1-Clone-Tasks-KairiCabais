@@ -1,0 +1,116 @@
+/* Variables */
+.description {
+  color: #FFFFFF;
+  font-size: 1.5em;
+  font-family: "Lato", serif;
+}
+
+.movie-title {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-family: "Teko", serif;
+}
+
+
+
+body {
+  background-color: #231651;
+}
+
+.cards {
+  background-color: #070410;
+}
+
+section {
+  background-color: #231651;
+}
+
+button {
+  background-color: #EEF36A;
+}
+
+navbar {
+  background-color: #4DCCBD;
+}/*# sourceMappingURL=test.css.map */
+
+
+
+/* Mobile media query*/
+/* On screens that are 720px or less, create a grid with column of 1, so the cards stack 1 on top of eachother for mobile view*/ 
+@media screen and (max-width: 719px) and (min-width: 360px) {
+  section {
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    navbar ul {
+      width: auto;
+      margin-top: 0;
+      display: none;
+    }
+    navbar .cta-contact {
+      order: 1;
+    }
+    .movie-title h3{
+      font-family: "Teko", sans-serif;
+      font-size: 2em;
+      margin-bottom: 12px;
+    }
+    .cards{
+      padding: 12px;
+    }
+}
+
+
+/* Tablet media query*/
+/* On screens that are 720px or less, create a grid with column of 1, so the cards stack 1 on top of eachother for mobile view*/ 
+@media screen and (max-width: 1023px) and (min-width: 720px) {
+  .content-container{
+    display: grid;
+    width: 60%;
+    margin: auto;   /* center the block element */
+    max-width: 900px;
+  }
+  section {
+        grid-template-columns: auto auto;
+        padding: 2rem;
+    }
+}
+
+/* Desktop media query */
+@media only screen and (min-width: 1024px) {
+
+  .content-container {
+    display: grid;
+    width: 60%;
+    max-width: 900px;
+    margin: auto;   /* center the block element */
+}
+    .movie-title {
+      font-size: 3rem;
+    }
+    section{  
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+    } /*this didn't apply*/
+     .full{
+      grid-template-columns: auto auto;
+    }
+    .column1{
+      grid-column: span 2 / span 2;
+      grid-row-start: 2;
+    }
+    .column2{
+      grid-column: span 4 / span 4;
+      grid-column-start: 1;
+      grid-row-start: 3; 
+    }
+    .wide{
+      grid-column: span 4 / span 4;
+      grid-column-start: 1;
+    }
+  .cards{
+    width:500px;
+    padding: 48px;
+  }
+  }

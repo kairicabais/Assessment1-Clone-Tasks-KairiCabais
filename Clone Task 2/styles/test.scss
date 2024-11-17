@@ -1,0 +1,106 @@
+@import "breakpoint";
+
+
+// Variables
+$clr--background: #231651;
+$clr--accent: #EEF36A;
+$clr--navbar: #4DCCBD;
+$clr--card: #070410;
+$clr--text: #FFFFFF;
+
+
+//mixin for text p
+@mixin text {
+    color: $clr--text;
+    font-size: 5vw;
+  }         
+  
+//mixin for headings h3, h2
+  @mixin heading {
+    color: $clr--text;
+    font-size: clamp(2em, 1em + 0.5cqi, 3em);
+  }
+
+.description {
+    @include text;
+    font-family: "Lato", serif;
+}  
+.movie-title {
+    @include heading;
+    font-family: "Teko", serif;
+    
+}   
+
+navbar{
+    .logo{
+    @include heading;
+    font-family: "Lato", serif;
+    font-size: 3em;
+    }
+}
+
+
+
+    @mixin button-bg {
+        background: $clr--background;
+        &:hover {
+          background:darken($bg,8%);
+          transition: all 0.3s ease;
+        }
+        &:active {
+          background:darken($bg,25%);
+        } 
+}
+
+button{
+    @include button-bg()
+}
+
+
+
+
+body{
+    background-color: $clr--background;
+}
+
+.cards{
+    background-color: $clr--card;
+}
+
+section{
+    background-color: $clr--primary;
+}
+
+button{
+    background-color: $clr--accent;
+}
+
+navbar{
+    background-color: $clr--navbar;
+}
+
+
+// make variables first for each size: mobile, tablet and desktop.
+// turn variables into grid mixins and youll be done!!!!
+$breakpoints: (
+    "mobile": "(min-width: 360px) and (max-width:720px)",
+    "tablet": "(min-width: 720px) and (max-width:1024px)",
+    "desktop": "(min-width: 360px) and (max-width:720px)",
+)
+
+// $grids: 1;
+// $grids: add-grid(4 at 720px);
+
+// @include breakpoint(mobile) {
+//     .full {
+//         @include grid-span(1);
+//     }
+
+//     .column2 {
+//         @include grid-span(1);
+//     }
+
+//     .wide {
+//         @include grid-span(1);
+//     }
+// }
